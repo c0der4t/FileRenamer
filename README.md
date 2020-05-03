@@ -12,4 +12,4 @@ Quickly rename all files in a directory which fit custom rules set by user.  Aim
 
 # Usage
 
-![Select a file within the target directory](github-pages-rsc/img/usage/1.png)
+![Select a file within the target directory](https://github.com/c0der4t/FileRenamer/github-pages-rsc/img/usage/1.png)
