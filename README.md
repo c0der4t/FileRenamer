@@ -11,3 +11,5 @@ Quickly rename all files in a directory which fit custom rules set by user.  Aim
  - Load files from local or external discs
 
 # Usage
+
+![Select a file within the target directory](github-pages-rsc/img/usage/1.png)
