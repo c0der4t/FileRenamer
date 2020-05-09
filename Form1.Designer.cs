@@ -239,8 +239,10 @@
             // redtLog
             // 
             this.redtLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.redtLog.Cursor = System.Windows.Forms.Cursors.Default;
             this.redtLog.Location = new System.Drawing.Point(0, 0);
             this.redtLog.Name = "redtLog";
+            this.redtLog.ReadOnly = true;
             this.redtLog.Size = new System.Drawing.Size(752, 456);
             this.redtLog.TabIndex = 2;
             this.redtLog.Text = "";

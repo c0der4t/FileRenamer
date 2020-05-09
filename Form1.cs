@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace FileRenamer
 {
@@ -17,11 +18,18 @@ namespace FileRenamer
         public frmMain()
         {
             InitializeComponent();
+            redtLog.LinkClicked += new LinkClickedEventHandler(redtLog_LinkClicked);
+
+        }
+
+        void redtLog_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            Process.Start(e.LinkText);
         }
 
         private void btnBrowseFolder_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Select a file inside a directory to list all files in the directory","Information");
+            MessageBox.Show("Select a file inside a directory to list all files in the directory", "Information");
             dlgBrowseFile.ShowDialog();
 
             ContainingFolder = dlgBrowseFile.FileName.Substring(0, dlgBrowseFile.FileName.LastIndexOf(@"\") + 1);
@@ -49,8 +57,8 @@ namespace FileRenamer
 
         private void lstbxFileinDirectory_SelectedIndexChanged(object sender, EventArgs e)
         {
-           /* string SelectedItem = lstbxFileinDirectory.SelectedItem.ToString();
-            edtCurrentSelection.Text = SelectedItem.Substring(0, SelectedItem.LastIndexOf("."));*/
+            /* string SelectedItem = lstbxFileinDirectory.SelectedItem.ToString();
+             edtCurrentSelection.Text = SelectedItem.Substring(0, SelectedItem.LastIndexOf("."));*/
         }
 
         private void edtReplaceOriginal_KeyDown(object sender, KeyEventArgs e)
@@ -178,10 +186,9 @@ namespace FileRenamer
             edtReplaceOriginal.Text = "";
             edtReplaceEnd.Text = "";
             edtFolder.Text = "";
+            lblFileCount.Text = "Total Files: 0";
             redtLog.Clear();
             progressbarProgress.Value = 0;
-            Log("Process Log");
-            Log("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
         }
 
         private void workerRenamer_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -242,7 +249,7 @@ namespace FileRenamer
         {
             if (lstbxFileinDirectory.SelectedIndex >= 0)
             {
-                int Index = lstbxFileinDirectory.SelectedIndex ;
+                int Index = lstbxFileinDirectory.SelectedIndex;
                 edtCurrentSelection.Focus();
                 lstbxFileinDirectory.Items.RemoveAt(Index);
                 edtCurrentSelection.Text = "";
@@ -261,7 +268,7 @@ namespace FileRenamer
                 string SelectedItem = lstbxFileinDirectory.SelectedItem.ToString();
                 edtCurrentSelection.Text = SelectedItem.Substring(0, SelectedItem.LastIndexOf("."));
             }
-            
+
         }
 
         private void lstbxFileinDirectory_KeyDown(object sender, KeyEventArgs e)

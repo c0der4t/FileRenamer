@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ namespace FileRenamer
 
         private void btnGithub_Click(object sender, EventArgs e)
         {
-            SelectionActive = true;
+            Process.Start(@"https://github.com/c0der4t/FileRenamer");
         }
 
         private void btnGithub_MouseLeave(object sender, EventArgs e)
