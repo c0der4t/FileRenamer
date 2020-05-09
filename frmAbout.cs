@@ -71,5 +71,16 @@ namespace FileRenamer
         private void pnlVersionInfo_MouseLeave(object sender, EventArgs e)
         {
         }
+
+        private void pnlVersionInfo_Paint(object sender, PaintEventArgs e)
+        {
+
+            Color col = Color.White; 
+            ButtonBorderStyle bbs = ButtonBorderStyle.Solid; 
+            int thickness = 1; 
+
+            ControlPaint.DrawBorder(e.Graphics, this.pnlVersionInfo.ClientRectangle,col, thickness, bbs, col, thickness, bbs, col, thickness, bbs, col, thickness, bbs);
+
+        }
     }
 }

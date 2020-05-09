@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGithub = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.pnlVersionInfo = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblReleaseDate = new System.Windows.Forms.Label();
+            this.lblVersion = new System.Windows.Forms.Label();
+            this.btnGithub = new System.Windows.Forms.Button();
             this.btnResources = new System.Windows.Forms.Button();
             this.btnCredits = new System.Windows.Forms.Button();
-            this.pnlVersionInfo = new System.Windows.Forms.Panel();
-            this.lblVersion = new System.Windows.Forms.Label();
-            this.lblReleaseDate = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnlVersionInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,9 +52,78 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "About FileRenamer";
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Headache", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(407, 248);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(87, 149);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Close";
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // pnlVersionInfo
+            // 
+            this.pnlVersionInfo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlVersionInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlVersionInfo.Controls.Add(this.linkLabel1);
+            this.pnlVersionInfo.Controls.Add(this.lblReleaseDate);
+            this.pnlVersionInfo.Controls.Add(this.lblVersion);
+            this.pnlVersionInfo.ForeColor = System.Drawing.Color.White;
+            this.pnlVersionInfo.Location = new System.Drawing.Point(33, 247);
+            this.pnlVersionInfo.Name = "pnlVersionInfo";
+            this.pnlVersionInfo.Size = new System.Drawing.Size(376, 151);
+            this.pnlVersionInfo.TabIndex = 7;
+            this.pnlVersionInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlVersionInfo_Paint);
+            this.pnlVersionInfo.MouseEnter += new System.EventHandler(this.pnlVersionInfo_MouseEnter);
+            this.pnlVersionInfo.MouseLeave += new System.EventHandler(this.pnlVersionInfo_MouseLeave);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.White;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.linkLabel1.Font = new System.Drawing.Font("Headache", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(48, 107);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(272, 18);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Click to View Release Notes";
+            // 
+            // lblReleaseDate
+            // 
+            this.lblReleaseDate.AutoSize = true;
+            this.lblReleaseDate.Font = new System.Drawing.Font("Headache", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblReleaseDate.Location = new System.Drawing.Point(156, 64);
+            this.lblReleaseDate.Name = "lblReleaseDate";
+            this.lblReleaseDate.Size = new System.Drawing.Size(198, 16);
+            this.lblReleaseDate.TabIndex = 2;
+            this.lblReleaseDate.Text = "Released 05/03/2020";
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Font = new System.Drawing.Font("Headache", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblVersion.Location = new System.Drawing.Point(14, 34);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(218, 16);
+            this.lblVersion.TabIndex = 1;
+            this.lblVersion.Text = "Version 1.0.0 - Jackdaw";
+            // 
             // btnGithub
             // 
             this.btnGithub.BackColor = System.Drawing.Color.Transparent;
+            this.btnGithub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGithub.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnGithub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGithub.Font = new System.Drawing.Font("Headache", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
@@ -71,26 +140,10 @@
             this.btnGithub.MouseEnter += new System.EventHandler(this.btnGithub_MouseEnter);
             this.btnGithub.MouseLeave += new System.EventHandler(this.btnGithub_MouseLeave);
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Headache", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(407, 248);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(87, 149);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "Close";
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // btnResources
             // 
             this.btnResources.BackColor = System.Drawing.Color.Transparent;
+            this.btnResources.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResources.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnResources.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResources.Font = new System.Drawing.Font("Headache", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
@@ -110,6 +163,7 @@
             // btnCredits
             // 
             this.btnCredits.BackColor = System.Drawing.Color.Transparent;
+            this.btnCredits.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCredits.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnCredits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCredits.Font = new System.Drawing.Font("Headache", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
@@ -126,71 +180,23 @@
             this.btnCredits.MouseEnter += new System.EventHandler(this.btnCredits_MouseEnter);
             this.btnCredits.MouseLeave += new System.EventHandler(this.btnGithub_MouseLeave);
             // 
-            // pnlVersionInfo
-            // 
-            this.pnlVersionInfo.BackColor = System.Drawing.Color.Transparent;
-            this.pnlVersionInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlVersionInfo.Controls.Add(this.linkLabel1);
-            this.pnlVersionInfo.Controls.Add(this.lblReleaseDate);
-            this.pnlVersionInfo.Controls.Add(this.lblVersion);
-            this.pnlVersionInfo.ForeColor = System.Drawing.Color.White;
-            this.pnlVersionInfo.Location = new System.Drawing.Point(34, 248);
-            this.pnlVersionInfo.Name = "pnlVersionInfo";
-            this.pnlVersionInfo.Size = new System.Drawing.Size(375, 149);
-            this.pnlVersionInfo.TabIndex = 7;
-            this.pnlVersionInfo.MouseEnter += new System.EventHandler(this.pnlVersionInfo_MouseEnter);
-            this.pnlVersionInfo.MouseLeave += new System.EventHandler(this.pnlVersionInfo_MouseLeave);
-            // 
-            // lblVersion
-            // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.Font = new System.Drawing.Font("Headache", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblVersion.Location = new System.Drawing.Point(14, 34);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(218, 16);
-            this.lblVersion.TabIndex = 1;
-            this.lblVersion.Text = "Version 1.0.0 - Jackdaw";
-            // 
-            // lblReleaseDate
-            // 
-            this.lblReleaseDate.AutoSize = true;
-            this.lblReleaseDate.Font = new System.Drawing.Font("Headache", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblReleaseDate.Location = new System.Drawing.Point(156, 64);
-            this.lblReleaseDate.Name = "lblReleaseDate";
-            this.lblReleaseDate.Size = new System.Drawing.Size(198, 16);
-            this.lblReleaseDate.TabIndex = 2;
-            this.lblReleaseDate.Text = "Released 05/03/2020";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.White;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.linkLabel1.Font = new System.Drawing.Font("Headache", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(48, 107);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(272, 18);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Click to View Release Notes";
-            // 
             // frmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::FileRenamer.Properties.Resources.background;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(534, 416);
-            this.Controls.Add(this.pnlVersionInfo);
             this.Controls.Add(this.btnGithub);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnResources);
             this.Controls.Add(this.btnCredits);
+            this.Controls.Add(this.pnlVersionInfo);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAbout";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAbout";
             this.pnlVersionInfo.ResumeLayout(false);
             this.pnlVersionInfo.PerformLayout();

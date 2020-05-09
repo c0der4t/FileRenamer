@@ -107,6 +107,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="metadata\logo3.png" />
+    <None Include="metadata\browse.png" />
+    <None Include="metadata\background.bmp" />
+    <None Include="Resources\background.jpg.bmp" />
+    <None Include="metadata\logo 2.png" />
     <None Include="metadata\opengithub-button-small.png" />
     <None Include="metadata\background.jpg" />
     <None Include="metadata\laptop-background.jpg" />

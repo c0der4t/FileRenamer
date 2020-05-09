@@ -278,7 +278,7 @@ namespace FileRenamer
             }
         }
 
-        private void btnTempBtn_Click(object sender, EventArgs e)
+        private void btnAbout_Click(object sender, EventArgs e)
         {
             frmAbout AboutPage = new frmAbout();
             AboutPage.Show();
