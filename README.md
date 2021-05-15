@@ -2,8 +2,6 @@
 
 Quickly rename all files in a directory which fit custom rules set by user.  Aimed at being an extremely easy and user friendly Mass File Renamer.
 
-# ⚠ FileRenamer is still in a DEBUG release and although stable may have errors 
-
 # Features
 
  - Mass add text/characters to file names
